@@ -25,10 +25,10 @@ const Contact = () => {
     const token = await recaptchaRef.current.executeAsync();
     emailjs
       .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         e.target,
-        process.env.USER_ID
+        process.env.REACT_APP_USER_ID
       )
       .then(
         () => setFormSubmit(true),
@@ -76,7 +76,7 @@ const Contact = () => {
         />
         <ReCAPTCHA
           ref={recaptchaRef}
-          sitekey={process.env.RECAPTCHA_SITE_KEY}
+          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
           size={"invisible"}
           badge="inline"
           onChange={onChange}
