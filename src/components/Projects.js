@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Projects.css";
 import destinationFinder from "../assets/destination-finder.jpg";
 import bookstore from "../assets/bookstore.jpg";

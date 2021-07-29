@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
-import Aos from "aos";
+import React from "react";
 import "aos/dist/aos.css";
 import "./About.css";
 
 const About = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
   return (
     <div id="about" name="about" className="container">
       <h1 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" >ABOUT ME</h1>

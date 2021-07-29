@@ -1,12 +1,16 @@
 #home .content {
   padding: 25px;
   margin-bottom: 75px;
+  background-color: white;
+  border-radius: 15px;
 }
 #home h1 {
   font-size: 50px;
+  font-family: "Playfair Display";
 }
 #home h2 {
   font-size: 25px;
+  font-family: "Playfair Display";
 }
 .linkIcons {
   display: flex;
@@ -28,9 +32,10 @@
   flex-direction: column;
   position: absolute;
   bottom: 50px;
+  color: white;
 }
 .down {
-  font-size: 30px;
+  font-size: 40px;
 }
 #down1,
 #down2,

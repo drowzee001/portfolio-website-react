@@ -10,16 +10,19 @@ import React, { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div className="App ">
-      <Nav />
-      <Home />
-      <About />
-      <Projects />
+    <>
+      <div className="App ">
+        <div class="image"></div>
+        <Nav />
+        <Home />
+        <About />
+        <Projects />
         <Contact />
-    </div>
+      </div>
+    </>
   );
 }
 

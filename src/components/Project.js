@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Projects.css";
 
 const Project = ({ project }) => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   const [flip, setFlip] = useState(false);
   const { transform, opacity } = useSpring({
     opacity: !flip ? 1 : 0,
@@ -20,7 +15,6 @@ const Project = ({ project }) => {
     <div
       className="project"
       data-aos="zoom-in"
-      data-aos-anchor-placement="center-bottom"
     >
       <animated.div
         className={!flip ? "front show" : "front hide"}
@@ -38,7 +32,6 @@ const Project = ({ project }) => {
         <button onClick={() => setFlip(true)}>More Info</button>
       </animated.div>
       <animated.div
-        className="back"
         className={flip ? "back show" : "back hide"}
         style={{ opacity: opacity.to((o) => 1 - o), transform }}
       >
@@ -55,7 +48,7 @@ const Project = ({ project }) => {
             <h3>Challenges</h3>
             <ul>
               {project.challenges.map((challenge) => {
-                return <li>{challenge}</li>;
+                return <li key={challenge}>{challenge}</li>;
               })}
             </ul>
           </div>
@@ -65,6 +58,7 @@ const Project = ({ project }) => {
             <a
               href={`https://github.com/drowzee001/${project.extension}-server`}
               target="_blank"
+              rel="noopener noreferrer"
             >
               Server GitHub
             </a>
@@ -73,6 +67,7 @@ const Project = ({ project }) => {
             <a
               href={`https://github.com/drowzee001/${project.extension}-client`}
               target="_blank"
+              rel="noopener noreferrer"
             >
               Client GitHub
             </a>
@@ -81,6 +76,7 @@ const Project = ({ project }) => {
             <a
               href={`https://${project.extension}.donovanrowzee.net`}
               target="_blank"
+              rel="noopener noreferrer"
             >
               Live Demo
             </a>

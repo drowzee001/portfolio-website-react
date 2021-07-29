@@ -3,7 +3,7 @@
 }
 .front,
 .back {
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.75);
   will-change: transform, opacity;
   width: 275px;
@@ -13,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }
 .project h2 {
   height: 55px;
@@ -42,10 +43,19 @@
   border-bottom: none;
 }
 .project button {
-  padding: 5px;
+  padding: 0;
   width: 70px;
   height: 50px;
   margin: 5px;
+}
+.project a {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 50px;
+  padding: 5px;
 }
 .front button {
   margin-bottom: 5px;
@@ -66,13 +76,14 @@
   height: 225px;
 }
 .buttons {
+  display: flex;
   padding-top: 25px;
   margin-bottom: 0;
 }
 .hide {
   display: none;
 }
-@media (max-width: 875px) {
+@media (max-width: 900px) {
   #projects {
     flex-direction: column;
     padding-top: 70px;
@@ -97,6 +108,9 @@
   .front h2 {
     height: auto;
     padding: 30px 0;
+  }
+  .buttons {
+    display: inline;
   }
   .back > button {
     margin-bottom: 24px;
