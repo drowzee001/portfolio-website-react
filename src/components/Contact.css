@@ -1,0 +1,164 @@
+#contact {
+  justify-content: center;
+}
+#contact h1 {
+  padding: 25px;
+}
+.contacts {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.contact {
+  display: flex;
+  align-items: center;
+}
+#contact .icon {
+  color: #03a9f4;
+  font-size: 25px;
+  padding-right: 25px;
+}
+form {
+  display: grid;
+  grid-gap: 25px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.75);
+  padding: 25px;
+  border-radius: 5px;
+  height: 500px;
+}
+form input {
+  text-align: center;
+  height: 25px;
+}
+form input,
+form textarea {
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 1px gray solid;
+  padding: 5px;
+}
+form input:last-of-type {
+  margin-bottom: 0;
+}
+form input,
+form textarea:focus {
+  outline: none;
+}
+form textarea {
+  resize: none;
+  margin-bottom: 0;
+  width: 250px;
+}
+form button {
+  margin: 25px 0;
+}
+form h1 {
+  grid-column: 1 / 3;
+  grid-row: 1 /2;
+}
+form .contacts {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+#name {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+#email {
+  grid-column: 1/ 2;
+  grid-row: 4 / 5;
+}
+#captcha {
+  grid-column: 1/ 2;
+  grid-row: 5 / 6;
+}
+#message {
+  grid-column: 2 /3;
+  grid-row: 3 / 6;
+}
+form button {
+  grid-column: 1 / 3;
+  grid-row: 6 / 7;
+  height: 40px;
+}
+.grecaptcha-badge {
+  margin: auto;
+}
+.formHide {
+  display: none;
+}
+.submitted {
+  display: none;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.75);
+  padding: 25px;
+  border-radius: 5px;
+  height: 500px;
+}
+.submitted h1 {
+  padding-bottom: 50px !important;
+}
+.submitted .contacts {
+  margin-bottom: 50px;
+}
+.submittedIcon {
+  font-size: 100px;
+  color: #03a9f4;
+  margin: 50px 0;
+}
+.submittedShow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 615px) {
+  #contact h1 {
+    padding: 0;
+  }
+  .contacts {
+    flex-direction: column;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .icon {
+    padding: 15px 0 !important;
+  }
+  form,
+  .submitted {
+    height: 550px;
+    width: 75%;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+  }
+  .submitted h1 {
+    padding-bottom: 25px !important;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form input {
+    margin: 0;
+  }
+  form textarea {
+    height: 150px;
+    margin-top: -25px;
+    width: auto;
+  }
+  form button {
+    margin: 0;
+  }
+  .grecaptcha-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
