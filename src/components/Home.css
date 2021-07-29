@@ -21,6 +21,9 @@
 .linkedinIcon {
   font-size: 50px;
 }
+.githubIcon {
+  color: black;
+}
 .githubIcon:visited {
   color: black;
 }
