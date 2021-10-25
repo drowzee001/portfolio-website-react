@@ -44,7 +44,7 @@ const Contact = () => {
         <div className="contacts">
           <div className="contact">
             <FontAwesomeIcon className="icon" icon={faPhone}></FontAwesomeIcon>
-            <p>(619) 594-2684</p>
+            <p>(619) 495-2684</p>
           </div>
           <div className="contact">
             <FontAwesomeIcon
